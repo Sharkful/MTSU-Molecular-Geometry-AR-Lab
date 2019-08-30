@@ -1,0 +1,402 @@
+{
+ "entries": [
+  {
+   "compression": 8,
+   "hash": "5ff3765db57fbe713e0c048c6de992e7035fbc5b",
+   "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
+   "size": 4067736,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
+  },
+  {
+   "compression": 8,
+   "hash": "3cec7f049d25e9718fca28ae54d0cbd4d2a564c8",
+   "pkgpath": "bin/libil2cpp.so",
+   "size": 59877960,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Native/libil2cpp.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "068cb3992d49f06214caebed516b727c1f0e12af",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\libil2cpp.so-a1f26a2434d61068",
+   "xfrm_size": 59878718
+  },
+  {
+   "compression": 8,
+   "hash": "5c856b80371bde9129f380cae53db7830d7c5138",
+   "pkgpath": "Data/Plugins/AudioPluginMSASpatializer.bundle",
+   "size": 257780,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/AudioPluginMSASpatializer.bundle"
+  },
+  {
+   "compression": 8,
+   "hash": "6b3b1067e8eeb28457c572292a209cc931e93089",
+   "pkgpath": "bin/AudioPluginMSASpatializer.so",
+   "size": 269360,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/AudioPluginMSASpatializer.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "a7c62ce597e27fbd1fc4c1f117511dbb160547ac",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\AudioPluginMSASpatializer.so-2c50e92318d5463b",
+   "xfrm_size": 270118
+  },
+  {
+   "compression": 8,
+   "hash": "669fadf60b08b4d27a1b8bba01f4580d50c85dd6",
+   "pkgpath": "Data/Plugins/DecoderContext.cpp",
+   "size": 21170,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/DecoderContext.cpp"
+  },
+  {
+   "compression": 8,
+   "hash": "afa9e38dd968be0ecf4fcce342fd2c6df7d2bfa4",
+   "pkgpath": "Data/Plugins/DecoderContext.h",
+   "size": 1605,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/DecoderContext.h"
+  },
+  {
+   "compression": 8,
+   "hash": "dea6d095b3b3c461ae1024dfb5ccecb1f76f7384",
+   "pkgpath": "Data/Plugins/ExampleMusicProvider.cpp",
+   "size": 30030,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/ExampleMusicProvider.cpp"
+  },
+  {
+   "compression": 8,
+   "hash": "3d11598b07f7c39e344873569264bc0ae8b011cd",
+   "pkgpath": "bin/LuminMediaPlayer.dll",
+   "size": 68608,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/LuminMediaPlayer.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "3fdd7619da7dbbe3f2081bad8cda85af9853405f",
+   "pkgpath": "bin/LuminUnity.dll",
+   "size": 317440,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/LuminUnity.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "2b84960e69feef2581c620537c74686d537bfdef",
+   "pkgpath": "bin/MSA.Runtime.dll",
+   "size": 19968,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/MSA.Runtime.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "5fa4fbb5960028d3f6bc5184affe05c5d30e9f32",
+   "pkgpath": "Data/Plugins/MusicProviderContext.cpp",
+   "size": 1092,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/MusicProviderContext.cpp"
+  },
+  {
+   "compression": 8,
+   "hash": "7959215b2471cc484b9e3646953633e76beed318",
+   "pkgpath": "Data/Plugins/MusicProviderContext.h",
+   "size": 1881,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/MusicProviderContext.h"
+  },
+  {
+   "compression": 8,
+   "hash": "107bd38c2d5fcad16c555b20cdde608b67cc799b",
+   "pkgpath": "bin/TDx.TDxInput.dll",
+   "size": 15872,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/TDx.TDxInput.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "dc5c570c2c0bb880fe9e02ac81342c2a561f8bf7",
+   "pkgpath": "bin/Unity.Analytics.StandardEvents.dll",
+   "size": 32256,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/Unity.Analytics.StandardEvents.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "685ebf069bbbe87aa587e88f9b4a22e1c410aef2",
+   "pkgpath": "bin/Unity.Analytics.Tracker.dll",
+   "size": 19456,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/Unity.Analytics.Tracker.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "b147890ad9964240d0ea64ef2c4ab0f62feddee7",
+   "pkgpath": "bin/UnityEngine.TestRunner.dll",
+   "size": 100864,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/UnityEngine.TestRunner.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "f47d24f52fca2290be66ec8c5e9f7dbcc7e2c3d8",
+   "pkgpath": "bin/UnityEngine.UI.dll",
+   "size": 258048,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/UnityEngine.UI.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "59d035b177af853aa8ee2a78714391dae4657a36",
+   "pkgpath": "bin/UnityMagicLeap.so",
+   "size": 1495008,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/UnityMagicLeap.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "e17fa3030278552c20203906c67d068612c79370",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\UnityMagicLeap.so-2c50e92318d5463b",
+   "xfrm_size": 1495766
+  },
+  {
+   "compression": 8,
+   "hash": "cf2a9409666397dfacb689ec38aa6bcb1aba178a",
+   "pkgpath": "Data/Plugins/Utility.cpp",
+   "size": 5496,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/Utility.cpp"
+  },
+  {
+   "compression": 8,
+   "hash": "bd0869f5a619c6f69b16ca15ddcdee09b2066eb7",
+   "pkgpath": "Data/Plugins/Utility.h",
+   "size": 476,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/Utility.h"
+  },
+  {
+   "compression": 8,
+   "hash": "c304dd41954e030c36437de3b651679e02512d0d",
+   "pkgpath": "bin/libml_camera_plugin.so",
+   "size": 14184,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/libml_camera_plugin.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "5e383b4ef40afda4fe578642c4aa760528e5b540",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\libml_camera_plugin.so-2c50e92318d5463b",
+   "xfrm_size": 14942
+  },
+  {
+   "compression": 8,
+   "hash": "6a0b868a47b45da60d66c10ba6a0195b85f54e43",
+   "pkgpath": "bin/libml_mediaplayer_plugin.so",
+   "size": 67624,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/libml_mediaplayer_plugin.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "dadc660675e8c617fb0cb90ca65d2b2faf6b7cda",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\libml_mediaplayer_plugin.so-2c50e92318d5463b",
+   "xfrm_size": 68382
+  },
+  {
+   "compression": 8,
+   "hash": "984e4d2049ed5491b970ba15d1e8c8cadac0896e",
+   "pkgpath": "bin/nunit.framework.dll",
+   "size": 339968,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Plugins/nunit.framework.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "e6124da6073b916e29e013cf3ae3f58a4c5fdb0e",
+   "pkgpath": "Data/Resources/mscorlib.dll-resources.dat",
+   "size": 337563,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Resources/mscorlib.dll-resources.dat"
+  },
+  {
+   "compression": 8,
+   "hash": "63c7ca62020949b1c87b1439f31b7a9719db98c1",
+   "pkgpath": "Data/Resources/unity default resources",
+   "size": 3652028,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Resources/unity default resources"
+  },
+  {
+   "compression": 8,
+   "hash": "efb154c0066ed95127ec57c591d4e975c475eb87",
+   "pkgpath": "Data/Resources/unity_builtin_extra",
+   "size": 754740,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/Resources/unity_builtin_extra"
+  },
+  {
+   "compression": 8,
+   "hash": "10506c7e5f53e331db0e8c7c94047849df023433",
+   "pkgpath": "Data/UnitySubsystems/UnityMagicLeap/UnitySubsystemsManifest.json",
+   "size": 176,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/UnitySubsystems/UnityMagicLeap/UnitySubsystemsManifest.json"
+  },
+  {
+   "compression": 8,
+   "hash": "ca90807f52feb474b373a83b2e50385b5b6f935e",
+   "pkgpath": "Data/boot.config",
+   "size": 270,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/boot.config"
+  },
+  {
+   "compression": 8,
+   "hash": "cca7fcfb6f44538c376f480ce281a47c43331b38",
+   "pkgpath": "Data/globalgamemanagers",
+   "size": 44672,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/globalgamemanagers"
+  },
+  {
+   "compression": 8,
+   "hash": "91c065862ec3b8a5d35516ee253aeff8250fb70d",
+   "pkgpath": "Data/globalgamemanagers.assets",
+   "size": 50568,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/globalgamemanagers.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "1a7b244226c661fe1fcb018742202c2ffafe4b7d",
+   "pkgpath": "Data/level0",
+   "size": 187608,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/level0"
+  },
+  {
+   "compression": 8,
+   "hash": "3f3d174fd8053977b31e1f60d937258096ceb530",
+   "pkgpath": "Data/level1",
+   "size": 153440,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/level1"
+  },
+  {
+   "compression": 8,
+   "hash": "359299fed658823ea2c53715f94bacede6321cc9",
+   "pkgpath": "Data/resources.assets",
+   "size": 537104,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/resources.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "d93a340ace95054a2254a2bdd41efad895a38c5b",
+   "pkgpath": "Data/resources.assets.resS",
+   "size": 360480,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/resources.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "50179246d65df70bcd8b4b19f45f2a19f3ca5698",
+   "pkgpath": "Data/sharedassets0.assets",
+   "size": 2835352,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/sharedassets0.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "5b1e2cd9352f7adc97d5b705792e5ec9f33eef2f",
+   "pkgpath": "Data/sharedassets0.assets.resS",
+   "size": 15000088,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/sharedassets0.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "599a83ac39a6c7b2975ebe9ef2242b7c21f8b93d",
+   "pkgpath": "Data/sharedassets1.assets",
+   "size": 550180,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/sharedassets1.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "92616784f4e26d5f7aaf6ad8f76465ad5eb67ebc",
+   "pkgpath": "Data/sharedassets1.assets.resS",
+   "size": 9369596,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Data/sharedassets1.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "ae08854f5250b1a48f505c9ef9ab3cfdf61a6656",
+   "pkgpath": "bin/Player.elf",
+   "size": 48686104,
+   "src": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/Temp/StagingArea/Player.elf",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "74221d9e110940c0267ddffe0ddb160ebcaf7633",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\Player.elf-58f0b3c6f0a6eb4d",
+   "xfrm_size": 48686862
+  },
+  {
+   "compression": 8,
+   "hash": "5925de9f4d7b83c65d1fd7b25ced5f0bf8c27e73",
+   "pkgpath": "bin/libc++_shared.so",
+   "size": 976832,
+   "src": "C:/Users/irs2e/MagicLeap/mlsdk/v0.21.0/lumin/stl/libc++/lib/libc++_shared.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "cec30ac27cd0a7cc5af0970d827ad0639d4746c3",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\libc++_shared.so-b7f7c7a6301d9eb6",
+   "xfrm_size": 977590
+  },
+  {
+   "compression": 8,
+   "hash": "b96d1955a8cb0c7df9aaaa3898decc06b626491e",
+   "pkgpath": "manifest.xml",
+   "size": 3595,
+   "src": "C:\\Users\\irs2e\\Documents\\Work\\Molecular Geometry Lab\\Temp\\StagingArea\\manifest.xml",
+   "xfrm_flags": {
+    "manifest": {
+     "cert_hash": "d1c20eaa07393b4a1834e4295162b969151e5414",
+     "developer_id": "51aa42a1-d4d3-44b3-b65b-d0a01014e07a"
+    }
+   },
+   "xfrm_hash": "0987bee857623372999e70e5d67c2059006df8fa",
+   "xfrm_path": "C:/Users/irs2e/Documents/Work/Molecular Geometry Lab/.out/.cache/debug_lumin_clang-3.8_aarch64/com.mtsuar.moleculegeometrylab-cf9625c9e368b35b\\manifest.xml-58f0b3c6f0a6eb4d",
+   "xfrm_size": 1245
+  }
+ ],
+ "pkgflags": {
+  "signed": {
+   "cert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert"
+  },
+  "taildata": {
+   "debuggable": true,
+   "devcert": "C:\\Users\\irs2e\\Documents\\Work\\privatekey\\testdevelop.cert",
+   "sbox": "USER",
+   "version": 3
+  }
+ }
+}

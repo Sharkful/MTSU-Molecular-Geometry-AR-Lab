@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 5aba5cd3c8c3cda4fafa099388c42fca
+  - enabled: 1
+    path: Assets/Scenes/Quiz.unity
+    guid: 844b1551d5ba5294e9e3272771bee782
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88d8db323af2ea249b2e8916cd129c41,
+      type: 2}
