@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+
 
 namespace MtsuMLAR
 {
@@ -8,10 +10,12 @@ namespace MtsuMLAR
         private RaycastHit pointerRayHitInfo;
         private Transform pointerTransform;
         private GameObject currentSelectedObject;
+        private GameObject currentHitObject;
 
         public RaycastHit PointerRayHitInfo { get => pointerRayHitInfo; set => pointerRayHitInfo = value; }
         public Transform PointerTransform { get => pointerTransform; set => pointerTransform = value; }
         public GameObject CurrentSelectedObject { get => currentSelectedObject; set => currentSelectedObject = value; }
+        public GameObject CurrentHitObject { get => currentHitObject; set => currentHitObject = value; }
     }
 
     //This is a base class for event handlers, in case a reference to a handler of any kind is needed

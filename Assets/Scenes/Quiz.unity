@@ -4112,18 +4112,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c35772906c8b7647b9f87cc50e0426f, type: 3}
---- !u!114 &729671166 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 571630071, guid: 4c35772906c8b7647b9f87cc50e0426f,
+--- !u!1 &729671166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666539393009923177, guid: 4c35772906c8b7647b9f87cc50e0426f,
     type: 3}
   m_PrefabInstance: {fileID: 729671165}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec2ddb89e68ec1408423fa4068b6283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &743313320
 GameObject:
   m_ObjectHideFlags: 0
@@ -10136,6 +10130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975366039}
   - component: {fileID: 1975366038}
+  - component: {fileID: 1975366040}
   m_Layer: 0
   m_Name: MLEventSystem
   m_TagString: MLEventSystem
@@ -10156,7 +10151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryClick: 0
-  _raycaster: {fileID: 729671166}
   clickWindow: 0.8
 --- !u!4 &1975366039
 Transform:
@@ -10172,6 +10166,21 @@ Transform:
   m_Father: {fileID: 1770850084}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975366040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975366037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918867fca1dd5e64fb8ee4cbee248eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerObject: {fileID: 729671166}
+  rightHandObject: {fileID: 0}
+  leftHandObject: {fileID: 0}
 --- !u!4 &1981870742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6759763535258060130, guid: 96575b9d30d562e4792349a39cdf9fea,

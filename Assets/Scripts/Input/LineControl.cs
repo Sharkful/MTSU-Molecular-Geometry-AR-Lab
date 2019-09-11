@@ -14,37 +14,54 @@ namespace MtsuMLAR
         private Vector3[] pointPositions;
 
         //Component Variables
-        private Raycaster rayScript;
+        //private Raycaster rayScript;
+        private MLEventSystem eventSystem;
+        private MLInputModuleV2 inputModule;
         private LineRenderer lRend;
         #endregion
 
-        private void Start()
+        private void Awake()
         {
-            rayScript = GetComponent<Raycaster>();
+            //rayScript = GetComponent<Raycaster>();
             lRend = GetComponent<LineRenderer>();
             lRend.positionCount = numSegments + 1;
             pointPositions = new Vector3[numSegments + 1];
+        }
+
+        private void Start()
+        {
+            inputModule = GameObject.FindGameObjectWithTag("MLEventSystem").GetComponent<MLInputModuleV2>();
+            eventSystem = GameObject.FindGameObjectWithTag("MLEventSystem").GetComponent<MLEventSystem>();
         }
 
         /*This Code checks the raycaster state, and draws the cursor depending on
          * whether it is dragging, interacting with an object, or a UI element*/
         private void LateUpdate()
         {
-            switch (rayScript.CurrentRaycasterState)
-            {
-                case RaycasterState.IsDrag:
-                case RaycasterState.RayHit:
-                    DrawSelectLine(rayScript.PrevHitObject.transform); //draw the cursor following the object
-                    break;
+            if (eventSystem.IsDragging)
+                DrawSelectLine(eventSystem.DraggedObject.transform);
+            else if (inputModule.CurrentHitState == MLInputModuleV2.HitState.ObjectHit && inputModule.PrimaryHitObject.tag == "ARUI")
+                DrawStraightLine(inputModule.PrimaryHitObjectDistance);
+            else if (inputModule.CurrentHitState == MLInputModuleV2.HitState.ObjectHit)
+                DrawSelectLine(inputModule.PrimaryHitObject.transform);
+            else
+                DrawStraightLine(cursorExtent);
 
-                case RaycasterState.UIHit:
-                    DrawStraightLine(rayScript.Hit.distance);                //Draw a straight line that ends at the UI
-                    break;
+            //switch (rayScript.CurrentRaycasterState)
+            //{
+            //    case RaycasterState.IsDrag:
+            //    case RaycasterState.RayHit:
+            //        DrawSelectLine(rayScript.PrevHitObject.transform); //draw the cursor following the object
+            //        break;
 
-                case RaycasterState.NoHit:                             //Draw a line of predetermined length
-                    DrawStraightLine(cursorExtent);
-                    break;
-            }
+            //    case RaycasterState.UIHit:
+            //        DrawStraightLine(rayScript.Hit.distance);                //Draw a straight line that ends at the UI
+            //        break;
+
+            //    case RaycasterState.NoHit:                             //Draw a line of predetermined length
+            //        DrawStraightLine(cursorExtent);
+            //        break;
+            //}
         }
 
         /*This function takes an input length and draws a straight line that long*/
