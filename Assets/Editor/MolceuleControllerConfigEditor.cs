@@ -13,8 +13,10 @@ public class MolceuleControllerConfigEditor : Editor
 
         EditorGUILayout.LabelField("Interaction Controls",EditorStyles.boldLabel);
         EditorGUILayout.HelpBox("Nothing in this Section Does anything Currently", MessageType.Info);
+#pragma warning disable CS0618 // Type or member is obsolete
         configFile.targetMaterial = (Material)EditorGUILayout.ObjectField("Target Material", configFile.targetMaterial, typeof(Material));
         configFile.selectMaterial = (Material)EditorGUILayout.ObjectField("Select Material", configFile.selectMaterial, typeof(Material));
+#pragma warning restore CS0618 // Type or member is obsolete
         configFile.TargetColor = EditorGUILayout.ColorField(new GUIContent("Target Color"), configFile.TargetColor, true, true, false);
         configFile.SelectColor = EditorGUILayout.ColorField(new GUIContent("Select Color"), configFile.SelectColor, true, true, false);
         configFile.outlineThickness = EditorGUILayout.Slider("Outline Thickness", configFile.outlineThickness, 0, 0.3f);

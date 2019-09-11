@@ -12,9 +12,10 @@ using UnityEngine.XR.MagicLeap;
 
 namespace MtsuMLAR
 {
+    [RequireComponent(typeof(MLInputModuleV2))]
     public class MLEventSystem : MonoBehaviour
     {
-        public static MLEventSystem current = null;
+        //public static MLEventSystem current = null;
 
         //enum to for the state variable type governing primary button
         enum clickButton { trigger, bumper }
@@ -30,8 +31,8 @@ namespace MtsuMLAR
         /// </summary>
         private GameObject lastHitObject = null;      //This object is what the system considers as hit, and is used to compare to the raycaster value to determine transistions
         private GameObject lastSelectedObject = null; //This is the object the system considers as selected
-        private GameObject hitObject;                 //This object holds the reference to the Raycaster's hit object, is used in comparisons in the decision structure
         private bool isDragging = false;              //Flag which causes the system to stop checking some things until draggin stops, also used by Raycaster
+        private GameObject draggedObject = null;
         private GameObject clickDownObject = null;    //The object the button was pressed down own. Used to check if it is released on the same object
         private GameObject click_2_DownObject = null;
         private float bumperTimer;                    //These time the interval between a down and an up event, allowing it to be processed as a click or not
@@ -39,8 +40,9 @@ namespace MtsuMLAR
         private float triggerTimer;
 
         //Object references used to obtain data like raycast state or controller events
-        [SerializeField,Tooltip("The Scene Raycaster, typically on the controller, used to select objects")]
-        private Raycaster _raycaster = null;
+        //[SerializeField,Tooltip("The Scene Raycaster, typically on the controller, used to select objects")]
+        //private Raycaster _raycaster = null;
+        private MLInputModuleV2 inputModule;
         MLInputController _controller;
 
         /*Data sent to handlers when they are called, has information about the hit
@@ -69,24 +71,25 @@ namespace MtsuMLAR
         public GameObject LastHitObject { get => lastHitObject; }
         public GameObject LastSelectedObject { get => lastSelectedObject; }
         public bool IsDragging { get => isDragging; }
+        public GameObject DraggedObject { get => draggedObject; }
         #endregion
 
         #region Unity Methods
         private void Awake()
         {
-            if (_raycaster == null)
-            {
-                Debug.LogError("No Raycaster assigned to the MLEventSystem, disabling");
-                enabled = false;
-            }
+            //if (_raycaster == null)
+            //{
+            //    Debug.LogError("No Raycaster assigned to the MLEventSystem, disabling");
+            //    enabled = false;
+            //}
 
             eventData = new MLEventData();
 
             //Set up the Singleton
-            if (current == null)
-                current = this;
-            else if (current != this)
-                Destroy(gameObject);
+            //if (current == null)
+            //    current = this;
+            //else if (current != this)
+            //    Destroy(gameObject);
         }
 
         // Start initializes references, the MLInput API, and event subscriptions
@@ -104,6 +107,9 @@ namespace MtsuMLAR
             MLInput.OnControllerButtonUp += ControllerButtonUpHandler;
             MLInput.OnTriggerDown += TriggerDownHandler;
             MLInput.OnTriggerUp += TriggerUpHandler;
+
+            inputModule = GetComponent<MLInputModuleV2>();
+            //DontDestroyOnLoad(current.gameObject);
         }
 
         //This manages memory, ensuring no leftover event subscriptions
@@ -121,7 +127,7 @@ namespace MtsuMLAR
         /// Update is primarily responsible for taking hitobject output from the raycaster
         /// and determining when an object is being pointed at, and what transitions have 
         /// occured, and then calls the necessary event handlers. it also calls event 
-        /// handlers when they have updates every fram, like Drag.
+        /// handlers when they have updates every frame, like Drag.
         /// </summary>
         void Update()
         {
@@ -131,10 +137,14 @@ namespace MtsuMLAR
             {
                 /*Only continue if the raycaster is in the correct state. This makes sure objects aren't sent 
                  * events When interacting with a UI element in front of it*/
-                if (_raycaster.CurrentRaycasterState == RaycasterState.RayHit || _raycaster.CurrentRaycasterState == RaycasterState.UIHit)
+                if (inputModule.CurrentHitState != MLInputModuleV2.HitState.NoHit)
                 {
+                    GameObject hitObject;
                     //This sets the reference to the raycaster hitobject, this is the object that is evaluated.
-                    hitObject = _raycaster.PrevHitObject;
+                    if (SearchForEventHandlerInAncestors(inputModule.PrimaryHitObject) == null)
+                        hitObject = inputModule.PrimaryHitObject;
+                    else
+                        hitObject = SearchForEventHandlerInAncestors(inputModule.PrimaryHitObject);
                     //This is checking if we transitioned from hitting nothing to now hitting an object
                     if (lastHitObject == null)
                     {
@@ -184,7 +194,7 @@ namespace MtsuMLAR
                     }
                 }
 
-                //Place the scene if held bumper
+                //Place the scene if held bumper, BAD HARDOCDE
                 if(_controller.IsBumperDown && Time.time - bumperTimer > 2.0f && bumperHeld == false)
                 {
                     _controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.Bump, MLInputControllerFeedbackIntensity.Low);
@@ -219,6 +229,7 @@ namespace MtsuMLAR
         }
         #endregion //Unity Methods
 
+        #region Private Methods
         /// <summary>
         /// This function updates the event Data class, which will allow recieving methods
         /// to make use of current raycaster information and selected object by the event
@@ -229,9 +240,40 @@ namespace MtsuMLAR
         private void UpdateEventData(MLEventData eventData)
         {
             eventData.CurrentSelectedObject = lastSelectedObject;
-            eventData.PointerRayHitInfo = _raycaster.Hit;
-            eventData.PointerTransform = _raycaster.transform;
+            //eventData.PointerRayHitInfo = _raycaster.Hit;
+            //eventData.PointerTransform = _raycaster.transform;
+            eventData.PointerTransform = inputModule.PrimaryInputPointerObject.transform;
+            eventData.CurrentHitObject = inputModule.PrimaryHitObject;
         }
+
+        /// <summary>
+        /// This recursively searches an object and its ancestors for  an eventhandler,
+        /// allowing for colliders placed on children of an object with an event handlling behavior
+        /// to be registered as an interactable object by the input system.
+        /// </summary>
+        /// <param name="searchObject">object to begin the search for an eventHandler</param>
+        private GameObject SearchForEventHandlerInAncestors(GameObject searchObject)
+        {
+            if (searchObject?.GetComponent<IMLEventHandler>() != null)
+                return searchObject;
+            else
+            {
+                searchObject = searchObject.transform.parent?.gameObject;
+                while(searchObject != null)
+                {
+                    if (searchObject.GetComponent<IMLEventHandler>() != null)
+                    {
+                        return searchObject;
+                    }
+                    else
+                    {
+                        searchObject = searchObject.transform.parent?.gameObject;
+                    }
+                }
+                return null;
+            }
+        }
+        #endregion
 
         #region Button Handlers
         /// <summary>
@@ -286,8 +328,9 @@ namespace MtsuMLAR
                                 {
                                     beginDragHandler.MLOnBeginDrag(eventData);
                                     isDragging = true;
+                                    draggedObject = lastHitObject;
                                     //This assignment prevents the raycast from entering drag state without a prev hit object
-                                    _raycaster.PrevHitObject = lastHitObject;
+                                    //_raycaster.PrevHitObject = lastHitObject;
                                     dragHandler = lastHitObject.GetComponent<IMLDragHandler>(); //cache reference to drag handler
                                                                                                 //If the object about to be dragged has not all ready been selected, then do this
                                     if (LastHitObject != lastSelectedObject)
@@ -457,6 +500,7 @@ namespace MtsuMLAR
                         }
                     }
                     isDragging = false; //End the drag, because primary button was released
+                    draggedObject = null;
                 }
             }
         }
@@ -511,8 +555,9 @@ namespace MtsuMLAR
                                 {
                                     beginDragHandler.MLOnBeginDrag(eventData);
                                     isDragging = true;
+                                    draggedObject = lastHitObject;
                                     //This assignment prevents the raycast from entering drag state without a prev hit object
-                                    _raycaster.PrevHitObject = lastHitObject;
+                                    //_raycaster.PrevHitObject = lastHitObject;
                                     dragHandler = lastHitObject.GetComponent<IMLDragHandler>(); //cache reference to drag handler
                                                                                                 //If the object about to be dragged has not all ready been selected, then do this
                                     if (lastSelectedObject != null && LastHitObject != lastSelectedObject)
@@ -682,6 +727,7 @@ namespace MtsuMLAR
                             }
                         }
                         isDragging = false; //End the drag, because primary button was released
+                        draggedObject = null;
                     }
                 }
             }

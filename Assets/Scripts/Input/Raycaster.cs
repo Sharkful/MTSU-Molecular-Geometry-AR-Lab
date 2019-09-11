@@ -71,7 +71,7 @@ namespace MtsuMLAR
          * the pointer look bad.*/
         void LateUpdate()
         {
-            isDragging = MLEventSystem.current.IsDragging;
+            isDragging = GameObject.FindGameObjectWithTag("MLEventSystem").GetComponent<MLEventSystem>().IsDragging;
             UpdateHits();
             StateSwitcher();
         }
